@@ -1,0 +1,129 @@
+
+//========== GLOBAL ==================================
+
+*
+*:after
+*:before
+	box-sizing inherit
+
+
+//========== ROOTS ===================================
+
+html
+	box-sizing border-box
+	-webkit-font-smoothing antialiased
+	-moz-font-smoothing antialiased
+
+body
+	background background
+	color color
+	font-size fontSize
+	font-family fontFamily
+	line-height lineHeight
+
+
+//========== LINKS ===================================
+
+.interactive
+	border none
+	background transparent
+
+a
+.interactive
+	color link
+	text-decoration none
+
+	&:hover
+		color linkHover
+		text-decoration underline
+
+
+//========== PARAGRAPH ===============================
+
+.p
+p
+	margin 0 0 1em
+	padding 0
+
+
+//========== IMAGE ===================================
+
+img
+	vertical-align middle
+
+
+//========== LINE ====================================
+
+hr
+	height 10px
+	margin 20px 0 10px
+	background none
+	border 0 solid borderColor
+	border-top-width 1px
+
+
+//========== HEADERS =================================
+
+.h1
+h1
+	font-size h1Font
+	line-height h1LineHeight
+	margin .9em 0
+
+.h2
+h2
+	font-weight normal
+	font-size h2Font
+	line-height h2LineHeight
+	margin .9em 0
+
+.h3
+h3
+	font-weight normal
+	font-size h3Font
+	line-height h3LineHeight
+	margin .8em 0
+
+.h4
+h4
+	font-size h4Font
+	line-height h4LineHeight
+	margin .6em 0
+
+.h5
+h5
+	font-size h5Font
+	line-height h5LineHeight
+	margin .4em 0
+
+
+//========== LISTS ===================================
+
+ul
+ol
+	padding 0
+	margin 0 0 1em 2em
+
+
+//========== BLOCKQUOTE ==============================
+
+blockquote
+	border-left 10px solid rgba(0,0,0,.1)
+	margin 1em
+	padding .5em .8em
+	quotes "\201C""\201D""\2018""\2019"
+	position relative
+
+	&:before
+		color #ccc
+		content open-quote
+		font-size 4em
+		line-height 0.1em
+		margin-right 0.1em
+		vertical-align -0.4em
+
+	p
+		display inline
+
+	footer
+		font-size .8em

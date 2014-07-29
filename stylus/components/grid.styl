@@ -1,0 +1,105 @@
+
+//========== GRID ====================================
+
+gridColumns = 12
+gridGutterWidth = 1em
+gridTabBreakpoint = tabBreakpoint
+gridDeskBreakpoint = deskBreakpoint
+gridTvBreakpoint = tvBreakpoint
+
+makeGrid(modifier)
+	for i in (1..gridColumns)
+		.grid{i}{modifier}
+			@extend .grid-col
+			flex-basis (100/gridColumns)%*i
+
+makeGridOffset(modifier)
+	for i in (1..gridColumns - 1)
+		.grid-offset{i}{modifier}
+			margin-left (100/gridColumns)%*i
+
+//====================================================
+
+.grid-row
+	box-sizing border-box
+	display flex
+	flex-wrap wrap
+	margin-left - gridGutterWidth
+	margin-right - gridGutterWidth
+
+.grid-col
+	flex-basis 100%
+	box-sizing border-box
+	padding-left gridGutterWidth
+	padding-right gridGutterWidth
+
+.grid
+	@extend .grid-col
+
+
+.gridAuto
+	@extend .grid-col
+	flex 1 1 0
+
+makeGrid('')
+makeGridOffset('')
+
+@media (min-width: gridTabBreakpoint)
+	makeGrid('--tab')
+	makeGridOffset('--tab')
+	.gridAuto--tab
+		flex 1 1 0
+
+@media (min-width: gridDeskBreakpoint)
+	makeGrid('--desk')
+	makeGridOffset('--desk')
+	.gridAuto--desk
+		flex 1 1 0
+
+@media (min-width: gridTvBreakpoint)
+	makeGrid('--tv')
+	makeGridOffset('--tv')
+	.gridAuto--tv
+		flex 1 1 0
+
+.grid-row--center
+	justify-content center
+
+.grid-row--end
+	justify-content flex-end
+
+.grid-row--top
+	align-items flex-start
+
+.grid-row--middle
+	align-items center
+
+.grid-row--bottom
+	align-items flex-end
+
+.grid-row--around
+	justify-content space-around
+
+.grid-row--between
+	justify-content space-between
+
+.grid-row--stretch
+	justify-content space-stretch
+
+.grid-row--first
+	order -1
+
+.grid-row--last
+	order 1
+
+
+
+
+.grid--noGutter
+	.grid-row
+		margin-left 0
+		margin-right 0
+	.grid-col
+		padding-left 0
+		padding-right 0
+
