@@ -1,0 +1,21 @@
+{
+  "name": "KacperKozak.pl",
+  "homepage": "https://github.com/DeXTeD/KacperKozak.pl",
+  "authors": [
+    "DeXTeD <dexted.xt@gmail.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  },
+  "devDependencies": {
+    "circliful": "~0.1.5",
+    "jquery-easing": "*"
+  }
+}

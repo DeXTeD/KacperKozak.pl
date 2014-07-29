@@ -1,0 +1,73 @@
+
+//========== HAMBURGER ===============================
+
+// based on: https://github.com/SaraSoueidan/navicon-transformicons
+
+
+hamburgerColor = brandColor
+hamburgerRadius = .4em
+hamburgerSize = 2.2em
+hamburgerTransition = all .2s ease
+hamburgerBackground = none
+hamburgerBorder = none
+hamburgerBackgroundHover = rgba(0,0,0,.05)
+hamburgerBorderHover = none
+
+
+//====================================================
+
+.hamburger
+	padding (hamburgerSize/2) (hamburgerSize/4)
+	display inline-block
+	cursor pointer
+	user-select none
+	border-radius hamburgerRadius
+	border hamburgerBorder
+	background hamburgerBackground
+	line-height 0
+	height (hamburgerSize/7)+(hamburgerSize)
+
+.hamburger:hover
+.hamburger_hover
+	border hamburgerBorderHover
+	background hamburgerBackgroundHover
+
+.hamburger-lines
+	display inline-block
+	width hamburgerSize
+	height (hamburgerSize/7)
+	background hamburgerColor
+	border-radius (hamburgerRadius/2)
+	transition hamburgerTransition
+	position relative
+
+.hamburger-lines:before
+.hamburger-lines:after
+	@extend .hamburger-lines
+	content ''
+	position absolute
+	left 0
+	transform-origin (hamburgerSize/14) center
+
+.hamburger-lines:before
+	top (hamburgerSize/4)
+
+.hamburger-lines:after
+	top -(hamburgerSize/4)
+
+
+
+.hamburger--x .hamburger-lines
+	background-color transparent
+
+	&:before
+	&:after
+		transform-origin: 50% 50%;
+		top 0
+		width hamburgerSize
+
+	&:before
+		transform rotate3d(0,0,1,45deg)
+
+	&:after
+		transform rotate3d(0,0,1,-45deg)

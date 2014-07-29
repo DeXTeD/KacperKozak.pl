@@ -24,8 +24,8 @@ makeGridOffset(modifier)
 	box-sizing border-box
 	display flex
 	flex-wrap wrap
-	margin-left - gridGutterWidth
-	margin-right - gridGutterWidth
+	margin-left -(gridGutterWidth)
+	margin-right -(gridGutterWidth)
 
 .grid-col
 	flex-basis 100%
@@ -34,7 +34,8 @@ makeGridOffset(modifier)
 	padding-right gridGutterWidth
 
 .grid
-	@extend .grid-col
+	flex-basis 100%
+	box-sizing border-box
 
 
 .gridAuto

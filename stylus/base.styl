@@ -20,6 +20,7 @@ body
 	font-size fontSize
 	font-family fontFamily
 	line-height lineHeight
+	margin 0
 
 
 //========== LINKS ===================================
@@ -42,7 +43,7 @@ a
 
 .p
 p
-	margin 0 0 1em
+	margin 1em 0
 	padding 0
 
 
@@ -66,20 +67,22 @@ hr
 
 .h1
 h1
+	font-weight 300
 	font-size h1Font
 	line-height h1LineHeight
 	margin .9em 0
 
+
 .h2
 h2
-	font-weight normal
+	font-weight 300
 	font-size h2Font
 	line-height h2LineHeight
 	margin .9em 0
 
 .h3
 h3
-	font-weight normal
+	font-weight 300
 	font-size h3Font
 	line-height h3LineHeight
 	margin .8em 0
@@ -95,6 +98,21 @@ h5
 	font-size h5Font
 	line-height h5LineHeight
 	margin .4em 0
+
+
+//========== UNDERLINE ===============================
+
+.underline
+	border-bottom 1px solid #B2B2B2
+	padding-bottom .7em
+
+
+//========== INVISIBLE LINK ==========================
+
+.il
+.il:hover
+	color inherit
+	text-decoration none
 
 
 //========== LISTS ===================================

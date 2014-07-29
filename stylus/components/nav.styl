@@ -1,0 +1,67 @@
+
+//========== NAV =====================================
+
+navPadding = 1em 0
+
+//====================================================
+
+.navWrapper
+	padding navPadding
+
+	.hamburger
+		display none
+
+
+.nav
+	list-style none
+	margin 0
+	padding 0
+
+.nav-item
+	display inline-block
+
+.nav-link
+	color #777
+	display block
+	padding .4em 1em
+	border-bottom 1px solid transparent
+	transition all .2s ease
+
+	&:hover
+		border-color #CCC
+		text-decoration none
+
+
+
+@media (max-width: tabBreakpoint)
+
+	.navWrapper
+		padding 0
+		margin-right .5em
+
+		.hamburger
+			display block
+
+	.nav
+		display none
+		position absolute
+		top 100%
+		right 0
+		background brandColor
+
+		.navWrapper:hover &
+			display block
+
+	.nav-item
+		display block
+
+	.nav-link
+		color #EEE
+		border none
+		padding .7em 1.4em
+
+		&:hover
+			color #FFF
+			background darken(brandColor, 20%)
+
+

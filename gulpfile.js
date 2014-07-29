@@ -2,6 +2,7 @@ var fs = require('fs');
 
 var gulp = require('gulp');
 var gutil = require('gulp-util');
+var gulpif = require('gulp-if');
 
 var rename = require("gulp-rename");
 var coffee = require('gulp-coffee');
@@ -10,27 +11,33 @@ var stylus = require('gulp-stylus');
 var minifyCSS = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
+// var browserify = require('gulp-browserify');
 
 var pkg = require('./package.json');
 
 var paths = {
 	scripts: [
-		'coffee/main.coffee'
+		'bower_components/jquery/dist/jquery.js',
+		'bower_components/jquery-easing/jquery.easing.js',
+		'bower_components/circliful/js/jquery.circliful.js',
+		'coffee/**/*.coffee'
 	],
-	styles: ['stylus/main.styl']
+	scriptsMain: 'coffee/main.coffee',
+	styles: ['stylus/**/*.styl'],
+	stylesMain: 'stylus/main.styl'
 };
 
 var output = {
 	styles: 'public/css',
-	scripts: 'public/js'
+	scripts: 'public/js',
+	scriptName: 'min.js'
 };
 
 
 gulp.task('scripts', function() {
 	gulp.src(paths.scripts)
-		.pipe(concat(pkg.name+'.coffee'))
-		.pipe(gulp.dest(output.scripts))
-		.pipe(coffee().on('error', gutil.log))
+		.pipe(gulpif(/[.]coffee$/, coffee().on('error', gutil.log)))
+		.pipe(concat(output.scriptName))
 		.pipe(gulp.dest(output.scripts));
 });
 
@@ -52,7 +59,7 @@ gulp.task('watch', function() {
 
 
 gulp.task('styles', function() {
-	gulp.src(paths.styles)
+	gulp.src(paths.stylesMain)
 		.pipe(stylus())
 		.pipe(autoprefixer())
 		.pipe(gulp.dest(output.styles))

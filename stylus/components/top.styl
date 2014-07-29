@@ -1,0 +1,95 @@
+
+//========== TOP =====================================
+
+topHeight = 8em
+topSmallHeight = 2em
+topPadding = 4em 0 1em
+topSmallPadding = .6em 0
+topTransition = all .2s ease
+
+//====================================================
+
+.topWrapper
+	height topHeight
+
+.top
+	padding topPadding
+	position fixed
+	top 0
+	right 0
+	left 0
+	background #FFF
+	z-index 100
+	// border-bottom 1px solid transparent
+	transition topTransition
+
+.top-nav
+	position absolute
+	top 0
+	right 0
+
+.top-inner
+	max-width pageWidth
+	margin 0 auto
+	position relative
+	padding pagePadding
+
+.top-heading
+	line-height 1em
+	font-size inherit
+	font-size 3em
+	margin 0
+	transition topTransition
+	display inline-block
+	position relative
+
+	a
+		display block
+
+
+.top-label
+	display block
+	font-size .4em
+	line-height 1em
+	margin-left 0.15em
+	position absolute
+	bottom 100%
+	left 0
+	transition topTransition
+
+
+.notOnTop
+
+	.top
+		padding topSmallPadding
+		box-shadow 0 0 15px rgba(0,0,0,.1)
+
+	.top-heading
+		font-size 2em
+		line-height 1
+
+	.top-label
+		opacity 0
+
+	.top-nav
+		padding 0
+
+
+@media (max-width: tabBreakpoint)
+
+	.topWrapper
+		height topSmallHeight
+
+	.top
+		padding topSmallPadding
+		box-shadow 0 0 15px rgba(0,0,0,.1)
+
+	.top-heading
+		font-size 2em
+		line-height 1
+
+	.top-label
+		opacity 0
+
+	.top-nav
+		padding 0
