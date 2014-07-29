@@ -96,6 +96,10 @@ ol {
   padding: 0;
   margin: 0 0 1em 2em;
 }
+.unstyled {
+  margin: 0;
+  list-style: none;
+}
 blockquote {
   border-left: 10px solid rgba(0,0,0,0.1);
   margin: 1em;
@@ -937,6 +941,28 @@ blockquote footer {
 }
 .work-description-header {
   font-size: 1.6em;
+}
+.icon {
+  width: 30px;
+  height: 31px;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  margin: 0.3em 0.3em 0.3em 0;
+}
+.icon--tel {
+  background-image: url("../images/tel.png");
+}
+.icon--mail {
+  background-image: url("../images/mail.png");
+}
+.icon--twitter {
+  background-image: url("../images/twitter.png");
+}
+.icon--github {
+  background-image: url("../images/github.png");
 }
 .vh {
   position: absolute;

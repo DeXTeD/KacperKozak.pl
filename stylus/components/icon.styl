@@ -1,0 +1,21 @@
+
+//========== GALLERY =================================
+
+iconList = tel, mail, twitter, github;
+
+//====================================================
+
+.icon
+	width 30px
+	height 31px
+	display inline-block
+	vertical-align middle
+	overflow hidden
+	text-indent 100%
+	white-space nowrap
+	margin .3em .3em .3em 0
+
+
+for i in iconList
+	.icon--{i}
+		background-image url(s('../images/%s.png', i))
