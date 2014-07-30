@@ -9560,11 +9560,19 @@ jQuery.extend( jQuery.easing,
  
 }( jQuery ));
 (function() {
-  var body, viewport;
+  var body, menu, menuList, menuOpened, menuTrigger, viewport;
 
   viewport = $(window);
 
   body = $('body');
+
+  menu = $('#menu');
+
+  menuTrigger = $('#menu-trigger');
+
+  menuList = $('#menu-list');
+
+  menuOpened = false;
 
   (function() {
     var onTop;
@@ -9613,6 +9621,20 @@ jQuery.extend( jQuery.easing,
         duration: 600,
         easing: 'easeOutQuint'
       });
+    }
+  });
+
+  menuTrigger.on('click', function(event) {
+    event.preventDefault();
+    if (!menuOpened) {
+      menuOpened = true;
+      menu.addClass('open');
+      return setTimeout(function() {
+        return body.one('click.menu-close', function() {
+          menuOpened = false;
+          return menu.removeClass('open');
+        });
+      }, 1);
     }
   });
 

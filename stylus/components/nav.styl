@@ -43,14 +43,20 @@ navPadding = 1em 0
 			display block
 
 	.nav
-		display none
+		visibility hidden
 		position absolute
 		top 100%
 		right 0
 		background brandColor
+		transition all .2s ease
+		margin-top -10px
+		opacity 0
 
-		.navWrapper:hover &
-			display block
+		.open &
+			visibility visible
+			opacity 1
+			transform translateY(10px)
+
 
 	.nav-item
 		display block

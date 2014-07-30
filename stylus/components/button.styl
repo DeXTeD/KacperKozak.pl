@@ -1,0 +1,78 @@
+
+//========== BUTTON ==================================
+
+buttonColor = #FFF
+buttonBackground = brandColor
+buttonBorderColor = brandColor
+buttonBorderWidth = 1px
+buttonRadius = .2em
+buttonFontSize = .9em
+buttonPadding = 0.663em 1.45em
+buttonSmall = 0.85
+buttonLarge = 1.1
+
+//====================================================
+
+.button
+	display inline-block
+	vertical-align middle
+	padding buttonPadding
+	border buttonBorderWidth solid buttonBorderColor
+	border-radius buttonRadius
+	background buttonBackground
+	color buttonColor
+	text-decoration none
+	font-size buttonFontSize
+	font-weight bold
+	line-height 1.21em
+	cursor pointer
+	text-align center
+	outline 0
+
+
+.button--small
+	padding buttonPadding[0]*buttonSmall buttonPadding[1]*buttonSmall
+	font-size buttonFontSize*buttonSmall
+
+
+.button--large
+	padding buttonPadding[0]*buttonLarge buttonPadding[1]*buttonLarge
+	font-size buttonFontSize*buttonLarge
+
+
+.button--full
+	display block
+	width 100%
+
+
+//---------- STATES ----------------------------------
+
+.button_hover
+.button:hover
+	color buttonColor
+	border-color lighten(buttonBorderColor, 7%)
+	background-color lighten(buttonBorderColor, 5%)
+	text-decoration none
+	position relative
+
+
+.button_active
+.button:active
+	border-color lighten(buttonBorderColor, 10%)
+	background-color lighten(buttonBorderColor, 5%)
+	box-shadow inset 0 0 1.4em rgba(0,0,0,.15)
+	position relative
+
+
+.button_disabled
+.button:disabled
+	opacity 0.5
+
+	&:active
+	&:hover
+		border-color buttonBorderColor
+		background-color buttonBorderColor
+		color buttonColor
+		cursor default
+		box-shadow none
+

@@ -2,6 +2,11 @@
 viewport = $ window
 body = $ 'body'
 
+menu        = $ '#menu'
+menuTrigger = $ '#menu-trigger'
+menuList    = $ '#menu-list'
+menuOpened  = no
+
 do ->
 	onTop = true
 	viewport.scroll ->
@@ -29,6 +34,7 @@ $('[data-circle]').circliful
 	animationStep: 2.0
 
 
+
 body.on 'click', 'a', (event) ->
 	a = $ this
 	href = a.attr 'href'
@@ -48,3 +54,17 @@ body.on 'click', 'a', (event) ->
 			easing: 'easeOutQuint'
 
 	return
+
+
+
+menuTrigger.on 'click', (event) ->
+	event.preventDefault()
+	if not menuOpened
+		menuOpened = yes
+		menu.addClass 'open'
+		setTimeout ->
+			body.one 'click.menu-close', ->
+				menuOpened = no
+				menu.removeClass 'open'
+		, 1
+

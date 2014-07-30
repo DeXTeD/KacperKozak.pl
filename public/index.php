@@ -1,3 +1,11 @@
+<?php
+$uri = trim($_SERVER['REQUEST_URI'], '/');
+$private = false;
+if ($uri === 'private')
+{
+	$private = true;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,9 +30,9 @@
 							Kacper Kozak
 						</a>
 					</h1>
-					<nav class="top-nav navWrapper">
-						<button class="hamburger" aria-label="Menu"><span class="hamburger-lines"></span></button>
-						<ul class="nav">
+					<nav class="top-nav navWrapper" id="menu">
+						<button class="hamburger" aria-label="Menu" id="menu-trigger"><span class="hamburger-lines"></span></button>
+						<ul class="nav" id="menu-list">
 							<li class="nav-item"><a href="#" class="nav-link">O mnie</a></li>
 							<li class="nav-item"><a href="#skills" class="nav-link">Umiejętności</a></li>
 							<li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
@@ -157,40 +165,70 @@
 		<div class="gallery">
 			<h2>Portfolio</h2>
 			<div class="grid">
+
 				<article class="grid-row work">
 					<div class="grid6--tab  grid12--mobi">
-						<img src="http://9px.pl/530x430/EEE/CA721C/APS" alt="" class="work-image">
+						<a href="images/portfolio/aps.png"><img src="images/portfolio/small/aps.png" alt="" class="work-image"></a>
 					</div>
 					<div class="grid6--tab  grid12--mobi work-description">
 						<h3 class="work-description-header">Simex APS</h3>
 						<p>System do planowania i zarządzania pracownikami.</p>
-						<h4>Zakres obowiązków</h4>
-						<p>Front-end - stworzenie systemu do zarządzania zadaniami.</p>
-						<h4>Użyte technologie</h4>
-						<p>CoffeeScript, Backbone.js, jQueryUI</p>
+						<p><strong>Zakres obowiązków:</strong> <br> Front-end - stworzenie systemu do zarządzania zadaniami.</p>
+						<p><strong>Użyte technologie:</strong> <br> CoffeeScript, Backbone.js, jQueryUI</p>
+						<p><a href="demo/aps" rel="nofollow" class="button">Demo</a></p>
 					</div>
 				</article>
+
+				<?php if ($private): ?>
 				<article class="grid-row work">
 					<div class="grid6--tab  grid12--mobi">
-						<img src="http://9px.pl/530x430" alt="" class="work-image">
+						<a href="images/portfolio/lenort.png"><img src="images/portfolio/small/lenort.png" alt="" class="work-image"></a>
 					</div>
 					<div class="grid6--tab  grid12--mobi work-description">
-						<h3 class="work-description-header">Some page</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aspernatur, natus soluta quisquam est, aperiam blanditiis at, voluptatum ea harum, quam ex non veritatis. Laudantium eligendi placeat, aliquid nostrum inventore!</p>
+						<h3 class="work-description-header">Lenort</h3>
+						<p>Strona firmy zajmującej się eksportem produktów na rynki międzynarodowe. Strona w całości działa używając technologii Ajax oraz dynamicznie zmieniając adresy za pomocą History API.</p>
+						<p><strong>Zakres obowiązków:</strong> <br> Front-end - złożenie dostarczonego layoutu, napisanie mechanizmu dynamicznej nawigacji oraz animacji.</p>
+						<p><strong>Użyte technologie:</strong> <br> CoffeeScript, Require.js, Gulp, Backbone.js, HTML5 History API</p>
+						<p><a href="http://www.lenort.eu/" rel="nofollow" class="button">Online</a></p>
 					</div>
 				</article>
+				<?php endif ?>
+
 				<article class="grid-row work">
 					<div class="grid6--tab  grid12--mobi">
-						<img src="http://9px.pl/530x430" alt="" class="work-image">
+						<a href="images/portfolio/wake1.png"><img src="images/portfolio/small/wake1.png" alt="" class="work-image"></a>
 					</div>
 					<div class="grid6--tab  grid12--mobi work-description">
-						<h3 class="work-description-header">Some page</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aspernatur, natus soluta quisquam est, aperiam blanditiis at, voluptatum ea harum, quam ex non veritatis. Laudantium eligendi placeat, aliquid nostrum inventore!</p>
+						<h3 class="work-description-header">Wakestyle</h3>
+						<p>Serwis sportowy z nowościami, filmami, wywiadami oraz relacjami związanymi z wakestyle'em (na kajcie, na wyciągu, za motorówką czy wyciągarką)</p>
+						<p><strong>Zakres obowiązków:</strong> <br> Back-end, front-end oraz layout.</p>
+						<p><strong>Użyte technologie:</strong> <br> PHP5, Laravel, jQuery</p>
+						<p><a href="http://wakestyle.pl/" rel="nofollow" class="button">Online</a></p>
 					</div>
 				</article>
+
+				<?php if ($private): ?>
+				<article class="grid-row work">
+					<div class="grid6--tab  grid12--mobi">
+						<a href="images/portfolio/quiandci.png"><img src="images/portfolio/small/quiandci.png" alt="" class="work-image"></a>
+					</div>
+					<div class="grid6--tab  grid12--mobi work-description">
+						<h3 class="work-description-header">Quo&amp;Ci</h3>
+						<p>Sklep internetowy z edytorem biżuterii.</p>
+						<p><strong>Zakres obowiązków:</strong> <br> Front-end - złożenie dostarczonego layoutu, napisanie edytora produktu.</p>
+						<p><strong>Użyte technologie:</strong> <br> CoffeeScript, SVG, Raphaël, Backbone.js</p>
+						<p><a href="http://quiandci.pl/c75,Bransoletki-Kolekcjonerskie-Elegance" rel="nofollow" class="button">Online</a></p>
+					</div>
+				</article>
+				<?php endif ?>
+
 			</div>
 		</div>
 	</div>
+
+	<footer class="page footer">
+		Copyright ©2014 by Kacper Kozak
+	</footer>
 
 	<script src="js/min.js"></script>
 
