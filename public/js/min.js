@@ -9575,11 +9575,10 @@ jQuery.extend( jQuery.easing,
   menuOpened = false;
 
   (function() {
-    var onTop;
+    var onTop, updateScroll;
     onTop = true;
-    viewport.scroll(function() {
+    updateScroll = function() {
       var oldOnTop, scroll;
-      console.log("aaa");
       scroll = +viewport.scrollTop();
       oldOnTop = onTop;
       onTop = scroll < 30;
@@ -9587,7 +9586,9 @@ jQuery.extend( jQuery.easing,
         body.toggleClass('onTop', onTop);
         body.toggleClass('notOnTop', !onTop);
       }
-    });
+    };
+    viewport.scroll(updateScroll);
+    return updateScroll();
   })();
 
   $('[data-circle]').circliful({

@@ -9,8 +9,7 @@ menuOpened  = no
 
 do ->
 	onTop = true
-	viewport.scroll ->
-		console.log "aaa"
+	updateScroll = ->
 		scroll = +viewport.scrollTop()
 		oldOnTop = onTop
 		onTop = scroll < 30
@@ -20,7 +19,9 @@ do ->
 			body.toggleClass 'notOnTop', not onTop
 
 		return
-	return
+
+	viewport.scroll updateScroll
+	updateScroll()
 
 
 
