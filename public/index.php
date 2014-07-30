@@ -175,7 +175,7 @@ if ($uri === 'private')
 						<p>System do planowania i zarządzania pracownikami.</p>
 						<p><strong>Zakres obowiązków:</strong> <br> Front-end - stworzenie systemu do zarządzania zadaniami.</p>
 						<p><strong>Użyte technologie:</strong> <br> CoffeeScript, Backbone.js, jQueryUI</p>
-						<p><a href="demo/aps" rel="nofollow" class="button">Demo</a></p>
+						<!-- <p><a href="demo/aps" rel="nofollow" class="button">Demo</a></p> -->
 					</div>
 				</article>
 
