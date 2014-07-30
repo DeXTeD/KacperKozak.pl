@@ -59,7 +59,7 @@ h1 {
 .h2,
 h2 {
   font-weight: 300;
-  font-size: 1.6em;
+  font-size: 1.8em;
   line-height: 1.2;
   margin: 0.9em 0;
 }
@@ -72,6 +72,7 @@ h3 {
 }
 .h4,
 h4 {
+  font-weight: 300;
   font-size: 1.2em;
   line-height: 1.2;
   margin: 0.6em 0;
@@ -940,7 +941,7 @@ blockquote footer {
   max-width: 100%;
 }
 .work-description-header {
-  font-size: 1.6em;
+  font-size: 1.8em;
 }
 .icon {
   width: 30px;

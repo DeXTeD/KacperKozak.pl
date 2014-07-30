@@ -8,9 +8,9 @@ body{background:#fff;color:#444;font-size:16px;font-family:'Open Sans',Arial,Hel
 img{vertical-align:middle}
 hr{height:10px;margin:20px 0 10px;background:0 0;border:0 solid #ccc;border-top-width:1px}
 .h1,h1{font-weight:300;font-size:2.2em;line-height:1.2;margin:.9em 0}
-.h2,h2{font-weight:300;font-size:1.6em;line-height:1.2;margin:.9em 0}
+.h2,h2{font-weight:300;font-size:1.8em;line-height:1.2;margin:.9em 0}
 .h3,h3{font-weight:300;font-size:1.5em;line-height:1.2;margin:.8em 0}
-.h4,h4{font-size:1.2em;line-height:1.2;margin:.6em 0}
+.h4,h4{font-weight:300;font-size:1.2em;line-height:1.2;margin:.6em 0}
 .h5,h5{font-size:1em;line-height:1;margin:.4em 0}
 .underline{border-bottom:1px solid #b2b2b2;padding-bottom:.7em}
 .il,.il:hover{color:inherit;text-decoration:none}
@@ -181,7 +181,7 @@ blockquote footer{font-size:.8em}
 .gallery{color:#fff}
 .work{margin-top:2em;margin-bottom:2em}
 .work-image{max-width:100%}
-.work-description-header{font-size:1.6em}
+.work-description-header{font-size:1.8em}
 .icon{width:30px;height:31px;display:inline-block;vertical-align:middle;overflow:hidden;text-indent:100%;white-space:nowrap;margin:.3em .3em .3em 0}
 .icon--tel{background-image:url(../images/tel.png)}
 .icon--mail{background-image:url(../images/mail.png)}
