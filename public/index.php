@@ -46,9 +46,9 @@ if ($uri === 'private')
 				<article class="grid6--desk grid12--tab">
 
 					<h2 class="underline">O mnie</h2>
-					<p>Nazywam się <strong>Kacper Kozak</strong>. Mam 23 lata i jestem web developerem z Częstochowy. W swojej pracy stawiam na dbałość o szczegóły oraz profestjonalizm.</p>
+					<p>Nazywam się <strong>Kacper Kozak</strong>. Mam 23 lata i jestem web developerem z Częstochowy. W swojej pracy stawiam na dbałość o szczegóły oraz profesjonalizm.</p>
 
-					<p>Tworzeniem stron zainteresowałem się 7 lat temu, a od ponad 4 lat parcuję na stwnowisku Front-end developer. Już od samego początku wiedziałem, że programowanie to jest to co będę robił przez całe życie.</p>
+					<p>Tworzeniem stron zainteresowałem się 7 lat temu, a od ponad 4 lat pracuję na stanowisku Front-end developer. Już od samego początku wiedziałem, że programowanie to jest to co będę robił przez całe życie.</p>
 
 
 				</article>
