@@ -189,6 +189,7 @@ if ($uri === 'private')
 						<p>Strona firmy zajmującej się eksportem produktów na rynki międzynarodowe. Strona w całości działa używając technologii Ajax oraz dynamicznie zmieniając adresy za pomocą History API.</p>
 						<p><strong>Zakres obowiązków:</strong> <br> Front-end - złożenie dostarczonego layoutu, napisanie mechanizmu dynamicznej nawigacji oraz animacji.</p>
 						<p><strong>Użyte technologie:</strong> <br> CoffeeScript, Require.js, Gulp, Backbone.js, HTML5 History API</p>
+						<p class="work-description-hint">Projekt wykonany przy współpracy z firmą Redhand.</p>
 						<p><a href="http://www.lenort.eu/" rel="nofollow" class="button">Online</a></p>
 					</div>
 				</article>
@@ -217,6 +218,7 @@ if ($uri === 'private')
 						<p>Sklep internetowy z edytorem biżuterii.</p>
 						<p><strong>Zakres obowiązków:</strong> <br> Front-end - złożenie dostarczonego layoutu, napisanie edytora produktu.</p>
 						<p><strong>Użyte technologie:</strong> <br> CoffeeScript, SVG, Raphaël, Backbone.js</p>
+						<p class="work-description-hint">Projekt wykonany przy współpracy z firmą Redhand.</p>
 						<p><a href="http://quiandci.pl/c75,Bransoletki-Kolekcjonerskie-Elegance" rel="nofollow" class="button">Online</a></p>
 					</div>
 				</article>

@@ -193,6 +193,7 @@ blockquote footer{font-size:.8em}
 .work-image{max-width:100%}
 .work-description{font-size:.9em}
 .work-description-header{font-size:1.8em;margin-top:.4em}
+.work-description-hint{font-size:.7em;color:#999}
 .icon{width:30px;height:31px;display:inline-block;vertical-align:middle;overflow:hidden;text-indent:100%;white-space:nowrap;margin:.3em .3em .3em 0}
 .icon--tel{background-image:url(../images/tel.png)}
 .icon--mail{background-image:url(../images/mail.png)}

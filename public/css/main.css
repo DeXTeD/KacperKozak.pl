@@ -1020,6 +1020,10 @@ blockquote footer {
   font-size: 1.8em;
   margin-top: 0.4em;
 }
+.work-description-hint {
+  font-size: 0.7em;
+  color: #999;
+}
 .icon {
   width: 30px;
   height: 31px;
