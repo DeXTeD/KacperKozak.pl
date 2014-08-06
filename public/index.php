@@ -47,9 +47,7 @@ if ($uri === 'private')
 
 					<h2 class="underline">O mnie</h2>
 					<p>Nazywam się <strong>Kacper Kozak</strong>. Mam 23 lata i jestem web developerem z Częstochowy. W swojej pracy stawiam na dbałość o szczegóły oraz profesjonalizm.</p>
-
 					<p>Tworzeniem stron zainteresowałem się 7 lat temu, a od ponad 4 lat pracuję na stanowisku Front-end developer. Już od samego początku wiedziałem, że programowanie to jest to co będę robił przez całe życie.</p>
-
 
 				</article>
 				<article class="grid6--desk grid12--tab">
@@ -94,7 +92,7 @@ if ($uri === 'private')
 									</div>
 									<div class="skill-description">
 										<h3 class="vh">HTML &amp; CSS</h3>
-										<p>HTML5, CSS3, LESS, SASS, Stylus, SVG, Microdata, AWI-ARIA, standardy W3C, Responsive Web Design</p>
+										<p>HTML5, CSS3, LESS, SASS, Stylus, SVG, Microdata, WAI-ARIA, standardy W3C, Responsive Web Design</p>
 									</div>
 								</div>
 							</div>
