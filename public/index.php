@@ -7,7 +7,7 @@ if ($uri === 'private')
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 	<meta charset="utf-8">
 	<title>Kacper Kozak - Front-end Developer</title>
