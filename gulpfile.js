@@ -38,18 +38,12 @@ gulp.task('scripts', function() {
 	gulp.src(paths.scripts)
 		.pipe(gulpif(/[.]coffee$/, coffee().on('error', gutil.log)))
 		.pipe(concat(output.scriptName))
-		.pipe(gulp.dest(output.scripts));
-});
-
-/*gulp.task('uglify', function() {
-	gulp.src(output+'/'+pkg.name+'.js')
 		.pipe(uglify({
 			preserveComments: 'some',
 			outSourceMap: false
 		}))
-		.pipe(rename({extname: ".min.js"}))
-		.pipe(gulp.dest(output));
-});*/
+		.pipe(gulp.dest(output.scripts));
+});
 
 
 gulp.task('watch', function() {
