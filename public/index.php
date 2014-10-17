@@ -11,12 +11,10 @@ if ($uri === 'private')
 <head>
 	<meta charset="utf-8">
 	<title>Kacper Kozak - Front-end Developer</title>
+	<meta name="description" content="Nazywam się <strong>Kacper Kozak</strong>. Mam 23 lata i jestem web developerem z Częstochowy. W swojej pracy stawiam na dbałość o szczegóły oraz profesjonalizm.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/main.min.css">
-	<!--[if lt IE 9]>
-		<script src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script>
-	<![endif]-->
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:600,400,300&amp;subset=latin,latin-ext" rel="stylesheet">
+	<!--[if lt IE 9]><script src="https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js"></script><![endif]-->
+	<style><?php include('css/main.min.css') ?></style>
 </head>
 <body>
 
@@ -151,7 +149,6 @@ if ($uri === 'private')
 									</div>
 								</div>
 							</div>
-						</div>
 						</div>
 					</div>
 				</article>
